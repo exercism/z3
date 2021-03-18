@@ -1,6 +1,6 @@
 import unittest
 from z3 import *
-from example import *
+from equilateral_triangle import *
 
 class EquilateralTriangleTest(unittest.TestCase):
     NUM_DECIMAL_PLACES = 5
