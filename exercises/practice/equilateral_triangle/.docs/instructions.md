@@ -18,7 +18,10 @@ The function should raise an ArithmeticError built-in python exception if
 Z3 solver produces a result that is not satisfiable.  An ArithmeticError 
 should also be raised if both input points are the same.
 
+The function should not use the "set_option()" function in the z3 library
+to set global parameters.  This is done within the test cases to ensure
+floats are of the expected precision (number of decimal points).
+
 Since the model interpretation of a Z3 Real variable is an instance of
 AlgebraicNumRef, IntNumRef, or RatNumRef, a function is provided to convert
 this instance to a float.
-
