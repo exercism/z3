@@ -79,12 +79,3 @@ def convert_to_float(z3_number):
     z3_number_float = float(z3_number_string)
 
     return z3_number_float
-
-if __name__ == "__main__":
-    set_option(rational_to_decimal=True)
-    set_option(precision=5)
-    first_point = (15.4, -8.32)
-    second_point = (25.2, -17.6)
-    return_first_point, return_second_point = generate_third_points(first_point, second_point)
-    print(return_first_point)
-    print(return_second_point)
