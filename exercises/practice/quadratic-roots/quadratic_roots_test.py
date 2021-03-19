@@ -41,7 +41,6 @@ class QuadraticRootsTest(unittest.TestCase):
     def test_root5(self):
         """Leading coefficent"""
         check(self, roots(2, -1, -28), (-3.5, 4))
-        # check(self, roots(2, -1, -28), (-4.815, 5.815), places = 1)
 
     def test_root6(self):
         """Two positive roots"""
