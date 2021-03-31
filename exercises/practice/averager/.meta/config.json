@@ -1,0 +1,17 @@
+{
+  "blurb": "A simple mathematical exercise. Just find the average of two numbers"",
+  "authors": ["Newby555"],
+  "files": {
+    "solution": [
+      "averager.py"
+    ],
+    "test": [
+      "averager_test.py"
+    ],
+    "example": [
+      ".meta/averager_example.py"
+    ]
+  },
+  "source": "This is an exercise to introduce users to interacting with numbers in Z3",
+  "source_url": ""
+}
