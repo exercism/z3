@@ -1,8 +1,13 @@
 from z3 import *
 
 def generate_third_points(first_point, second_point):
+
+    # TODO: Write your code here
+
     pass
 
+# Do not modify this function!
+# Works as described below
 def convert_to_float(z3_number):
     """ 
     Converts AlgebraicNumRef, IntNumRef, and RatNumRef
