@@ -1,66 +1,72 @@
 from z3 import*
 
+NUM_FRAMES = 10
+MIN_STRIKE_OR_SPARE_SCORE = 10
+
 def bowlingScore(pins_per_roll):
-    numOfRolls = len(pins_per_roll)
-    score = 0
-    lastStrikeRoll = 99 #Initialize to a high variable that it'll never reach
-    firstThrowInFrame = True
-    previousFrameSpare = False
+    # Calculate the indices in 'pins_per_roll' list that indicate the start of a frame
+    frame_start_indices = get_frame_start_indices(pins_per_roll)
 
+    # Declare lists to append Z3 equations
+    constants = []
+    equations = []
+    
+    # Add Number of Pins per Roll as their own variables
+    num_pins_per_roll = [Int(f"num_pins_per_roll{roll_number}") for roll_number in range(len(pins_per_roll) + 1)]
+    for roll_number in range(len(pins_per_roll)):
+        constants.append(num_pins_per_roll[roll_number] == pins_per_roll[roll_number])
+        
+    # Add additional 'Number of Pins per Roll' to ensure no list overbound error occurs below (set to 0 so it doesn't interfere with calculations)
+    constants.append(num_pins_per_roll[len(pins_per_roll)] == 0)
+
+    # Calculate and Add Number of Rolls per Frame as their own variables
+    rolls_per_frame = [Int(f"rolls_per_frame{frame_number}") for frame_number in range(NUM_FRAMES)]
+    for frame_number in range(NUM_FRAMES - 1):
+        constants.append(rolls_per_frame[frame_number] == (frame_start_indices[frame_number + 1] - frame_start_indices[frame_number]))
+        
+    constants.append(rolls_per_frame[NUM_FRAMES - 1] == (len(pins_per_roll) - frame_start_indices[NUM_FRAMES - 1]))
+
+    # Determine score equation for each frame depending on strike, spare, or open frame
+    frame_scores = [Int(f"frame_score{i}") for i in range(NUM_FRAMES)]
+    for frame_number in range(NUM_FRAMES - 1):
+        frame_start_index = frame_start_indices[frame_number]
+        
+        # If Strike or Spare, add 3 rolls (Strike: 1 + 2 extra) (Spare: 2 + 1 extra)
+        # Else (If Open), add 2 rolls
+        frame_equation = If(num_pins_per_roll[frame_start_index] + num_pins_per_roll[frame_start_index + 1] >= MIN_STRIKE_OR_SPARE_SCORE,
+                frame_scores[frame_number] == num_pins_per_roll[frame_start_index] + num_pins_per_roll[frame_start_index + 1] + num_pins_per_roll[frame_start_index + 2],
+                frame_scores[frame_number] == num_pins_per_roll[frame_start_index] + num_pins_per_roll[frame_start_index + 1])
+        
+        equations.append(frame_equation)
+        
+    # Frame 10 has a different equation
+    frame_start_index = frame_start_indices[NUM_FRAMES - 1]
+    
+    # No list overbound error occurs if there is no third roll in Frame 10 because an extra 'Number of Pins per Roll' was added (set to 0 so it doesn't interfere with calculations)
+    frame_equation = (frame_scores[NUM_FRAMES - 1] == num_pins_per_roll[frame_start_index] + num_pins_per_roll[frame_start_index + 1] + num_pins_per_roll[frame_start_index + 2])
+    equations.append(frame_equation)
+
+    # Add Equations to Solver and Find Model
     s = Solver()
-    totalScore = Real('score')
-
-    for i in range(numOfRolls):
-        if (pins_per_roll[i] == 10):
-            if (firstThrowInFrame): #Strike
-                score = score + 10
-
-                if ((lastStrikeRoll == (i-1)) and notTenthFrame(i, numOfRolls)):
-                    score = score + 10
-
-                    if (pins_per_roll[i-2] == 10): #Multiple strikes back to back
-                        score = score + 10
-
-                lastStrikeRoll = i
-                
-            else: #Spare
-                score = score + pins_per_roll[i]
-                previousFrameSpare = True
-
-                if (lastStrikeRoll == (i-2) and (i != numOfRolls-1)):   #Spare after a strike
-                    score = score + 10
-
-            firstThrowInFrame = True #Goes to first throw in next frame
-
-        else:
-            if (previousFrameSpare):
-                if (i != numOfRolls-1):
-                    score = score + pins_per_roll[i]
-                    previousFrameSpare = False  #Only add number the first roll of the frame
-
-            elif ((lastStrikeRoll == (i-1)) or (lastStrikeRoll == (i-2))):
-                if (notTenthFrame(i, numOfRolls) and (lastStrikeRoll == (i-1))):
-                    score = score + pins_per_roll[i]
-
-                    if (pins_per_roll[i-2] == 10): #Multiple strikes back to back
-                        score = score + pins_per_roll[i]
-
-                elif (notTenthFrame(i, numOfRolls) and (lastStrikeRoll == (i-2))):
-                    score = score + pins_per_roll[i]
-
-            if (not firstThrowInFrame):
-                if (pins_per_roll[i] + pins_per_roll[i-1] == 10): #Spare
-                    previousFrameSpare = True
-
-            score = score + pins_per_roll[i]
-            firstThrowInFrame = not firstThrowInFrame
-
-    s.add(totalScore == score)
+    s.add(constants + equations)
     s.check()
-    return(s.model().eval(totalScore))
+    m = s.model()
 
-def notTenthFrame(index, numOfRolls):
-        if ((index>0) and (index != numOfRolls-1) and (index != numOfRolls-2)):
-            return True
+    # Sum scores for each frame to calculate total score
+    total_score = 0
+    for frame_number in range(NUM_FRAMES):
+        total_score += int(str(m.eval(frame_scores[frame_number])))
+        
+    return total_score
+    
+def get_frame_start_indices(pins_per_roll):
+    #Determine indices in input list where each of the 10 frames start in standard bowling game
+    frame_start_indices = [0] * NUM_FRAMES
+    roll_count = 0
+    for i in range(NUM_FRAMES):
+        frame_start_indices[i] = roll_count
+        if pins_per_roll[roll_count] == 10:
+            roll_count += 1
         else:
-            return False
+            roll_count += 2
+    return frame_start_indices
