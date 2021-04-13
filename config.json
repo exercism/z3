@@ -1,12 +1,12 @@
 {
   "language": "Z3",
   "slug": "z3",
-  "active": false,
+  "active": true,
   "status": {
-    "concept_exercises": false,
-    "test_runner": false,
-    "representer": false,
-    "analyzer": false
+    "concept_exercises": true,
+    "test_runner": true,
+    "representer": true,
+    "analyzer": true
   },
   "blurb": "Z3 is a theorem prover from Microsoft Research. It is ideal for determining if mathematical equations have a solution and for solving those equations very quickly if there is a possible solution.",
   "version": 3,
@@ -14,23 +14,28 @@
     "indent_style": "space",
     "indent_size": 4
   },
+  "files": {
+    "solution": ["%{snake_slug}.py"],
+    "test": ["%{snake_slug}_test.py"],
+    "example": ["example.py"],
+  },
   "exercises": {
     "concept": [],
     "practice": [
-    {
+      {
         "slug": "averager",
         "name": "Averager",
-        "uuid": "TODO: Find uuid",
+        "uuid": "TODO: Add uuid",
         "practices": [
         "numbers"
         ],
         "prerequisites": [],
         "difficulty": 1
       },
-      {
+       {
         "slug": "bowling",
         "name": "Bowling",
-        "uuid": "TODO: Find uuid",
+        "uuid": "TODO: Add uuid",
         "practices": [
           "conditionals",
           "comparisons",
@@ -40,44 +45,64 @@
         "prerequisites": ["basics"],
         "difficulty": 5
       }
-    ]
+    ],
+    "foregone": ["lens-person"]
   },
   "concepts": [
-  {
-      "uuid": "TODO: Find uuid",
+    {
+      "uuid": "TODO: Add uuid",
       "slug": "basics",
       "name": "Basics",
       "blurb": "TODO: add blurb for basics concept"
     },
     {
-      "uuid": "TODO: Find uuid",
-      "slug": "numbers",
-      "name": "Numbers",
-      "blurb": "TODO: add blurb for numbers concept"
+      "uuid": "TODO: Add uuid",
+      "slug": "bools",
+      "name": "Bools",
+      "blurb": "TODO: add blurb for bools concept"
     },
     {
-      "uuid": "TODO: Find uuid",
-      "slug": "conditionals",
-      "name": "Conditionals",
-      "blurb": "TODO: add blurb for conditionals concept"
+      "uuid": "TODO: Add uuid",
+      "slug": "for-loops",
+      "name": "For Loops",
+      "blurb": "TODO: add blurb for for-loops concept"
     },
     {
-      "uuid": "TODO: Find uuid",
-      "slug": "comparisons",
-      "name": "Comparisons",
-      "blurb": "TODO: add blurb for comparisons concept"
+      "uuid": "TODO: Add uuid",
+      "slug": "functions",
+      "name": "Functions",
+      "blurb": "TODO: add blurb for functions concept"
     },
     {
-      "uuid": "TODO: Find uuid",
-      "slug": "loops",
-      "name": "loops",
-      "blurb": "TODO: add blurb for loops concept"
+      "uuid": "TODO: Add uuid",
+      "slug": "integers",
+      "name": "Integers",
+      "blurb": "TODO: add blurb for integers concept"
     },
+    {
+      "uuid": "TODO: Add uuid",
+      "slug": "return-keyword",
+      "name": "Return Keyword",
+      "blurb": "TODO: add blurb for return-keyword concept"
+    },
+    {
+      "uuid": "TODO: Add uuid",
+      "slug": "tuples",
+      "name": "Tuples",
+      "blurb": "TODO: add blurb for tuples concept"
+    }
   ],
-  "key_features": [],
+  "key_features": [
+    {
+      "title": "Easy",
+      "content": "Quick to learn & intuitive to use.",
+      "icon": ""
+    }
+  ],
   "tags": [
     "platform/windows",
     "platform/mac",
+    "runtime/language_specific",
     "used_for/scientific_calculations",
     "used_for/scripts"
   ]
