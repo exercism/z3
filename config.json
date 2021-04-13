@@ -75,5 +75,10 @@
     },
   ],
   "key_features": [],
-  "tags": []
+  "tags": [
+    "platform/windows",
+    "platform/mac",
+    "used_for/scientific_calculations",
+    "used_for/scripts"
+  ]
 }
