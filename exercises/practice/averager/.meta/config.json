@@ -3,9 +3,7 @@
   "authors": [
     "Newby555"
   ],
-  "contributors": [
-    "Newby555"
-  ],
+  "contributors": [],
   "files": {
     "solution": [
       "averager.py"
