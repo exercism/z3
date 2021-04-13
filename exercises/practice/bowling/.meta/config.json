@@ -1,0 +1,20 @@
+{
+  "blurb": "Calculate the score of a bowling game.",
+  "authors": [
+    "Newby555"
+  ],
+  "contributors": [],
+  "files": {
+    "solution": [
+      "bowling.py"
+    ],
+    "test": [
+      "bowling_test.py"
+    ],
+    "example": [
+      "bowling_example.py"
+    ]
+  },
+  "source": "This is an exercise to introduce users to loops and equations in Z3",
+  "source_url": "https://en.wikipedia.org/wiki/Ten-pin_bowling"
+}
