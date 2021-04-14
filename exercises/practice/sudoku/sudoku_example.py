@@ -20,23 +20,11 @@ def sudoku(puzzle: list) -> list:
 
     sudoku_constraints = range_constraint + rows_constraint + columns_constraint + square_constraint
 
-    """
-    ((0, 0, 0, 0, 9, 4, 0, 3, 0),
-    (0, 0, 0, 5, 1, 0, 0, 0, 7),
-    (0, 8, 9, 0, 0, 0, 0, 4, 0),
-    (0, 0, 0, 0, 0, 0, 2, 0, 8),
-    (0, 6, 0, 2, 0, 1, 0, 5, 0),
-    (1, 0, 2, 0, 0, 0, 0, 0, 0),
-    (0, 7, 0, 0, 0, 0, 5, 2, 0),
-    (9, 0, 0, 0, 6, 5, 0, 0, 0),
-    (0, 4, 0, 9, 7, 0, 0, 0, 0))
-    """
-
-    # Ensure that the generated sudoku solution works with the fits the given puzzle.
+    # Ensure that the generated sudoku solution works with the given puzzle.
     puzzle_constraint = [If(puzzle[row][col] == 0,
-                     True,
-                     X[row][col] == puzzle[row][col])
-                  for row in range(9) for col in range(9)]
+                            True,
+                            X[row][col] == puzzle[row][col]
+                         ) for row in range(9) for col in range(9)]
 
     s = Solver()
     s.add(sudoku_constraints + puzzle_constraint)
