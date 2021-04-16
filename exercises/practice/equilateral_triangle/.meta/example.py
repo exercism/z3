@@ -41,8 +41,8 @@ def generate_third_points(first_point, second_point):
     solver.add(point_decider_equation1)
     if solver.check() == sat:
         model = solver.model()
-        x2 = convert_to_float(model[x[2]])
-        y2 = convert_to_float(model[y[2]])
+        x2 = convert_to_float(model.eval(x[2]))
+        y2 = convert_to_float(model.eval(y[2]))
         third_point_1 = x2, y2
     else:
         raise ArithmeticError("Equations not satisfiable for first point")
@@ -53,14 +53,13 @@ def generate_third_points(first_point, second_point):
     solver.add(point_decider_equation2)
     if solver.check() == sat:
         model = solver.model()
-        x2 = convert_to_float(model[x[2]])
-        y2 = convert_to_float(model[y[2]])
+        x2 = convert_to_float(model.eval(x[2]))
+        y2 = convert_to_float(model.eval(y[2]))
         third_point_2 = x2, y2
     else:
         raise ArithmeticError("Equations not satisfiable for second point")
     solver.pop()
 
-    # Return points
     return third_point_1, third_point_2
 
 def convert_to_float(z3_number):
