@@ -44,6 +44,19 @@
         ],
         "prerequisites": ["basics"],
         "difficulty": 5
+      },
+      {
+        "slug": "equilateral_triangle",
+        "name": "Equilateral Triangle",
+        "uuid": "TODO: Add uuid",
+        "practices": [
+          "conditionals",
+          "comparisons",
+          "loops",
+          "numbers"
+        ],
+        "prerequisites": ["basics"],
+        "difficulty": 2
       }
     ],
     "foregone": ["lens-person"]
