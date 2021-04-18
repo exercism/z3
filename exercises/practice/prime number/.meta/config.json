@@ -1,0 +1,20 @@
+{
+    "blurb": "A simple mathematical exercise. Given an input, determine if the number is prime.",
+    "authors": [
+      "andjam19"
+    ],
+    "contributors": [],
+    "files": {
+      "solution": [
+        "prime.py"
+      ],
+      "test": [
+        "prime_test.py"
+      ],
+      "example": [
+        "prime_example.py"
+      ]
+    },
+    "source": "This is an exercise to introduce users to interacting with solvers in Z3",
+    "source_url": "https://en.wikipedia.org/wiki/Prime_number"
+  }
