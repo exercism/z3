@@ -1,6 +1,5 @@
 import unittest
-# from missing_number import missing_number
-from missing_number_example import missing_number
+from missing_number import missing_number
 
 class MyTestCase(unittest.TestCase):
     def test50(self):
