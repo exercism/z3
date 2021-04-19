@@ -11,12 +11,12 @@ def tupleEqualNoOrder(t1: tuple, t2: tuple) -> bool:
         return t1[0] == t2[1] and t1[1] == t2[0]
 
 class GoldbachTester(unittest.TestCase):
-    def testall(self):
+    def test_exclusive(self):
         cases = [(4, (2, 2)), (6, (3, 3)), (8, (5, 3)), (12, (5, 7))]
         for (even, primes) in cases:
             components = goldbach(even)
-            self.assertIsNotNone(components)
-            self.assertCountEqual(primes, components)
+            self.assertIsNotNone(components, f"No factors returned for {even}.")
+            self.assertCountEqual(primes, components, f"Expecting {primes} for {even} but got {components}")
 
     def test_non_exclusive(self):
         cases = [
@@ -31,7 +31,7 @@ class GoldbachTester(unittest.TestCase):
                     self.assertTrue(True)
                     break
             else:
-                self.assertTrue(False)
+                self.assertTrue(False, f"No matching factor pair found for {even}. Factors returned: {components}")
 
 if(__name__ == "__main__"):
     unittest.main()
