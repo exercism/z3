@@ -1,5 +1,5 @@
 import unittest
-from quadratic_roots import roots
+from quadratic import roots
 import z3
 
 def toFloat(x: z3.RatNumRef) -> float:
@@ -7,19 +7,27 @@ def toFloat(x: z3.RatNumRef) -> float:
     x = x.as_fraction()
     return float(x.numerator) / float(x.denominator)
 
-def check(ut, t1: tuple, t2: tuple, places = 7):
+def check(ut, t1: tuple, t2: tuple):
     """Checks if two tuples contain the same nearly equivalent elements, regardless of order."""
     if(t1 is None and t2 is None):
         ut.assertTrue(True)
-    elif(t2 is None or t2 is None):
+    elif(t1 is None or t2 is None):
         # technically an xor
-        ut.assertTrue(False)
+        ut.assertTrue(False, "One tuple was found to be None while the other isn't.")
+    elif(len(t1) != len(t2)):
+        ut.assertTrue(False, f"Tuple lengths do not match (received {len(t1)}, expected {len(t2)}).")
     else:
         t1 = tuple(toFloat(x) for x in t1)
-        ut.assertTrue((round(t1[0], places) == round(t2[0], places) and round(t1[1], places) == round(t2[1], places)) or
-                (round(t1[1], places) == round(t2[0], places) and round(t1[0], places) == round(t2[1], places)))
+        ut.assertCountEqual(t1, t2, f"Tuples do not contain the same elements ({t1} and {t2}).")
 
 class QuadraticRootsTest(unittest.TestCase):
+    NUM_DECIMAL_PLACES = 7
+
+    def setUp(self) -> None:
+        """Set up parameters for how tests should be run and the precision."""
+        # z3.set_option(rational_to_decimal = True)
+        z3.set_option(precision = QuadraticRootsTest.NUM_DECIMAL_PLACES)
+
     def test_root1(self):
         """Basic difference of squares"""
         check(self, roots(1, 0, -4), (-2, 2))
