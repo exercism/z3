@@ -57,6 +57,19 @@
         ],
         "prerequisites": ["basics"],
         "difficulty": 2
+      },
+      {
+        "slug": "eight-queens",
+        "name": "Eight Queens",
+        "uuid": "TODO: Add uuid",
+        "practices": [
+          "conditionals",
+          "comparisons",
+          "loops",
+          "numbers"
+        ],
+        "prerequisites": ["basics"],
+        "difficulty": 5
       }
     ],
     "foregone": ["lens-person"]
