@@ -1,24 +1,147 @@
 {
   "language": "Z3",
   "slug": "z3",
-  "active": false,
+  "active": true,
   "status": {
-    "concept_exercises": false,
-    "test_runner": false,
-    "representer": false,
-    "analyzer": false
+    "concept_exercises": true,
+    "test_runner": true,
+    "representer": true,
+    "analyzer": true
   },
-  "blurb": "",
+  "blurb": "Z3 is a theorem prover from Microsoft Research. It is ideal for determining if mathematical equations have a solution and for solving those equations very quickly if there is a possible solution.",
   "version": 3,
   "online_editor": {
     "indent_style": "space",
     "indent_size": 4
   },
+  "files": {
+    "solution": ["%{snake_slug}.py"],
+    "test": ["%{snake_slug}_test.py"],
+    "example": ["example.py"],
+  },
   "exercises": {
     "concept": [],
-    "practice": []
+    "practice": [
+      {
+        "slug": "averager",
+        "name": "Averager",
+        "uuid": "TODO: Add uuid",
+        "practices": [
+        "numbers"
+        ],
+        "prerequisites": [],
+        "difficulty": 1
+      },
+       {
+        "slug": "bowling",
+        "name": "Bowling",
+        "uuid": "TODO: Add uuid",
+        "practices": [
+          "conditionals",
+          "comparisons",
+          "loops",
+          "numbers"
+        ],
+        "prerequisites": ["basics"],
+        "difficulty": 5
+      },
+      {
+        "slug": "equilateral-triangle",
+        "name": "Equilateral Triangle",
+        "uuid": "TODO: Add uuid",
+        "practices": [
+          "conditionals",
+          "comparisons",
+          "loops",
+          "numbers"
+        ],
+        "prerequisites": ["basics"],
+        "difficulty": 2
+      }
+    ],
+    "foregone": ["lens-person"]
   },
-  "concepts": [],
-  "key_features": [],
-  "tags": []
+  "concepts": [
+    {
+      "uuid": "TODO: Add uuid",
+      "slug": "basics",
+      "name": "Basics",
+      "blurb": "TODO: add blurb for basics concept"
+    },
+    {
+      "uuid": "TODO: Add uuid",
+      "slug": "bools",
+      "name": "Bools",
+      "blurb": "TODO: add blurb for bools concept"
+    },
+    {
+      "uuid": "TODO: Add uuid",
+      "slug": "for-loops",
+      "name": "For Loops",
+      "blurb": "TODO: add blurb for for-loops concept"
+    },
+    {
+      "uuid": "TODO: Add uuid",
+      "slug": "functions",
+      "name": "Functions",
+      "blurb": "TODO: add blurb for functions concept"
+    },
+    {
+      "uuid": "TODO: Add uuid",
+      "slug": "integers",
+      "name": "Integers",
+      "blurb": "TODO: add blurb for integers concept"
+    },
+    {
+      "uuid": "TODO: Add uuid",
+      "slug": "return-keyword",
+      "name": "Return Keyword",
+      "blurb": "TODO: add blurb for return-keyword concept"
+    },
+    {
+      "uuid": "TODO: Add uuid",
+      "slug": "tuples",
+      "name": "Tuples",
+      "blurb": "TODO: add blurb for tuples concept"
+    }
+  ],
+  "key_features": [
+    {
+      "title": "Batteries Included",
+      "content": "Epic & well-documented standard library. Need more? Use a PyPi package - there's one for everything.",
+      "icon": ""
+    },
+    {
+      "title": "Easy",
+      "content": "Human-friendly Syntax and a vibrant, supportive community. Quick to learn & intuitive to use.",
+      "icon": ""
+    },
+    {
+      "title": "Extensible",
+      "content": "Need to call Fortran from a web API? Done. Need to process images using C? Python can do that.",
+      "icon": ""
+    },
+    {
+      "title": "Flexible",
+      "content": "Duck, dynamic, & strong typing. Easy to debug. Fun for experiments, robust for large applications.",
+      "icon": ""
+    },
+    {
+      "title": "Multi-paradigm",
+      "content": "OOP, structured, functional, & aspect-oriented. Adaptable to how you structure your programs.",
+      "icon": ""
+    },
+    {
+      "title": "Ubiquitous",
+      "content": "Accepted for almost any use. Easily interface with other languages & execute almost everywhere.",
+      "icon": ""
+    }
+  ],
+  "tags": [
+    "platform/windows",
+    "platform/mac",
+    "runtime/language_specific",
+    "used_for/scientific_calculations",
+    "used_for/scripts"
+  ]
 }

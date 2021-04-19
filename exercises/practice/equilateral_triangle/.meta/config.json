@@ -1,0 +1,22 @@
+{
+  "blurb": "Calculate the third point of an equilateral triangle when given the coordinates of the first two points.",
+  "authors": [
+    "CSwift8"
+  ],
+  "contributors": [
+    "Newby555"
+  ],
+  "files": {
+    "solution": [
+      "equilateral-triangle.py"
+    ],
+    "test": [
+      "equilateral-triangle-test.py"
+    ],
+    "example": [
+      "equilateral-triangle-example.py"
+    ]
+  },
+  "source": "This is an exercise to introduce users to loops and equations in Z3",
+  "source_url": "https://en.wikipedia.org/wiki/Equilateral_triangle"
+}
