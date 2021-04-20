@@ -1,0 +1,22 @@
+{
+  "blurb": "A simple mathematical exercise. Just find the missing number out of a list of numbers.",
+  "authors": [
+    "grantg012 "
+  ],
+  "contributors": [
+    "Newby555"
+  ],
+  "files": {
+    "solution": [
+      "missing_number.py"
+    ],
+    "test": [
+      "missing_number_test.py "
+    ],
+    "example": [
+      "missing_number_example.py"
+    ]
+  },
+  "source": "This is an exercise to introduce users to interacting with numbers in Z3",
+  "source_url": "https://en.wikipedia.org/wiki/List_of_numbers"
+}
