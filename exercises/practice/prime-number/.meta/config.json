@@ -3,7 +3,9 @@
     "authors": [
       "andjam19"
     ],
-    "contributors": [],
+    "contributors": [
+      "CSwift8"
+    ],
     "files": {
       "solution": [
         "prime.py"
@@ -15,6 +17,6 @@
         "prime_example.py"
       ]
     },
-    "source": "This is an exercise to introduce users to interacting with solvers in Z3",
+    "source": "This is an exercise to introduce users to interacting with numbers in Z3",
     "source_url": "https://en.wikipedia.org/wiki/Prime_number"
   }
