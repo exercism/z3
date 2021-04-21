@@ -88,10 +88,12 @@
         "name": "Prime Number",
         "uuid": "TODO: Add uuid",
         "practices": [
+          "conditionals",
+          "comparisons",
           "numbers"
         ],
-        "prerequisites": [],
-        "difficulty": 1
+        "prerequisites": ["basics"],
+        "difficulty": 2
       }
     ],
     "foregone": ["lens-person"]
