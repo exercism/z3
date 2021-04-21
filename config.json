@@ -82,6 +82,16 @@
         ],
         "prerequisites": ["basics"],
         "difficulty": 1
+      },
+      {
+        "slug": "prime-number",
+        "name": "Prime Number",
+        "uuid": "TODO: Add uuid",
+        "practices": [
+          "numbers"
+        ],
+        "prerequisites": [],
+        "difficulty": 1
       }
     ],
     "foregone": ["lens-person"]
