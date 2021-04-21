@@ -72,6 +72,18 @@
         "difficulty": 5
       },
       {
+        "slug": "goldbach",
+        "name": "Goldbach's Conjecture",
+        "uuid": "TODO: Add uuid",
+        "practices": [
+          "conditionals",
+          "comparisons",
+          "numbers"
+        ],
+        "prerequisites": ["basics"],
+        "difficulty": 5
+      },
+      {
         "slug": "missing-number",
         "name": "Missing Number",
         "uuid": "TODO: Add uuid",
