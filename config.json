@@ -118,6 +118,18 @@
         ],
         "prerequisites": ["basics"],
         "difficulty": 5
+      },
+      {
+        "slug": "prime-number",
+        "name": "Prime Number",
+        "uuid": "TODO: Add uuid",
+        "practices": [
+          "conditionals",
+          "comparisons",
+          "numbers"
+        ],
+        "prerequisites": ["basics"],
+        "difficulty": 2
       }
     ],
     "foregone": ["lens-person"]
