@@ -1,0 +1,22 @@
+{
+  "blurb": "An intermediate mathematical exercise. Create a function to determine the two primes that can be added together for a given even number greater than two.",
+  "authors": [
+    "grantg012"
+  ],
+  "contributors": [
+    "andjam19"
+  ],
+  "files": {
+    "solution": [
+      "goldbach.py"
+    ],
+    "test": [
+      "goldbach_test.py"
+    ],
+    "example": [
+      "goldbach_example.py"
+    ]
+  },
+  "source": "This is an exercise to introduce users to interacting with numbers in Z3",
+  "source_url": "https://en.wikipedia.org/wiki/Goldbach%27s_conjecture"
+}
