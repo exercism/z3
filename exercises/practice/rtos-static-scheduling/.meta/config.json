@@ -1,0 +1,22 @@
+{
+  "blurb": "Given a task list, determine a schedule in which the tasks can execute sequentially with no overlap",
+  "authors": [
+    "CSwift8"
+  ],
+  "contributors": [
+    "Newby555"
+  ],
+  "files": {
+    "solution": [
+      "rtos_static_scheduling_example.py"
+    ],
+    "test": [
+      "rtos_static_scheduling_test.py"
+    ],
+    "example": [
+      "rtos_static_scheduling.py"
+    ]
+  },
+  "source": "This is an exercise to introduce users to loops and equations in Z3",
+  "source_url": "https://en.wikipedia.org/wiki/Real-time_operating_system"
+}
