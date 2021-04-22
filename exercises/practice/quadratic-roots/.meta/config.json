@@ -1,0 +1,24 @@
+{
+  "blurb": "A mathematical exercise. Implement a function to calculate the real roots of a polynomial of the form ax^2 + bx + c.",
+  "authors": [
+    "grantg012"
+  ],
+  "contributors": [
+    "CSwift8",
+    "Newby555",
+    "andjam19"
+  ],
+  "files": {
+    "solution": [
+      "quadratic_roots.py"
+    ],
+    "test": [
+      "quadratic_roots_test.py"
+    ],
+    "example": [
+      "quadratic_roots_example.py"
+    ]
+  },
+  "source": "This is an exercise to introduce users to interacting with numbers in Z3",
+  "source_url": "https://en.wikipedia.org/wiki/Quadratic_equation"
+}
