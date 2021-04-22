@@ -94,6 +94,18 @@
         ],
         "prerequisites": ["basics"],
         "difficulty": 1
+      },
+      {
+        "slug": "minima",
+        "name": "Local Minima",
+        "uuid": "TODO: Add uuid",
+        "practices": [
+          "conditionals",
+          "comparisons",
+          "numbers"
+        ],
+        "prerequisites": ["basics"],
+        "difficulty": 2
       }
     ],
     "foregone": ["lens-person"]

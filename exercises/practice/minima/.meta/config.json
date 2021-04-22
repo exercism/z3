@@ -1,0 +1,22 @@
+{
+  "blurb": "A simple mathematical exercise. Given coefficients (a, b, c, d), find the local minima for a polynomial in the form f(x) = ax^3 + bx^2 + cx + d.",
+  "authors": [
+    "grantg012"
+  ],
+  "contributors": [
+    "andjam19"
+  ],
+  "files": {
+    "solution": [
+      "minima.py"
+    ],
+    "test": [
+      "minima_test.py"
+    ],
+    "example": [
+      "minima_example.py"
+    ]
+  },
+  "source": "This is an exercise to introduce users to interacting with numbers in Z3",
+  "source_url": "https://en.wikipedia.org/wiki/Maxima_and_minima"
+}
