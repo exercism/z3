@@ -106,6 +106,18 @@
         ],
         "prerequisites": ["basics"],
         "difficulty": 2
+      },
+      {
+        "slug": "goldbach",
+        "name": "Goldbach's Conjecture",
+        "uuid": "TODO: Add uuid",
+        "practices": [
+          "conditionals",
+          "comparisons",
+          "numbers"
+        ],
+        "prerequisites": ["basics"],
+        "difficulty": 5
       }
     ],
     "foregone": ["lens-person"]
