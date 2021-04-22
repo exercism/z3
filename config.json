@@ -72,8 +72,8 @@
         "difficulty": 5
       },
       {
-        "slug": "minima",
-        "name": "Local Minima",
+        "slug": "quadratic-roots",
+        "name": "Quadratic Roots",
         "uuid": "TODO: Add uuid",
         "practices": [
           "conditionals",
@@ -81,7 +81,7 @@
           "numbers"
         ],
         "prerequisites": ["basics"],
-        "difficulty": 2
+        "difficulty": 5
       },
       {
         "slug": "missing-number",
@@ -94,6 +94,18 @@
         ],
         "prerequisites": ["basics"],
         "difficulty": 1
+      },
+      {
+        "slug": "minima",
+        "name": "Local Minima",
+        "uuid": "TODO: Add uuid",
+        "practices": [
+          "conditionals",
+          "comparisons",
+          "numbers"
+        ],
+        "prerequisites": ["basics"],
+        "difficulty": 2
       }
     ],
     "foregone": ["lens-person"]
