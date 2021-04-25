@@ -22,7 +22,9 @@ The output should be a single three-tuple consisting of (q_a, q_b, profit) where
 2. q_b: optimal quantity of motor B to produce
 3. profit: maximizing profit value in dollars
 
-Other important points to note:
+Other important points to note:      
 q_a and q_b cannot be floating-points numbers because a fraction of a motor cannot be produced.
 The Z3 model results for variables will need to be converted to ints before being output.  If the Z3
 model result is of type `IntNumRef`, the `as_long()` class method may be used to convert to an integer.
+If the problem is unsatisfiable due to invalid inputs, then raise an `ArithmeticError()` python built-in
+exception.
