@@ -1,0 +1,21 @@
+{
+  "blurb": "Compute the quantities of motor A and motor B that optimizes profit",
+  "authors": [
+    "CSwift8"
+  ],
+  "contributors": [
+  ],
+  "files": {
+    "solution": [
+      "two_product_production_decision.py"
+    ],
+    "test": [
+      "two_product_production_decision_test.py"
+    ],
+    "example": [
+      "two_product_production_decision_example.py"
+    ]
+  },
+  "source": "This exercise introduces the Integer Linear Programming (ILP) functionality of Z3",
+  "source_url": "https://en.wikipedia.org/wiki/Integer_programming"
+}
