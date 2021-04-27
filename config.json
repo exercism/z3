@@ -130,6 +130,34 @@
         ],
         "prerequisites": ["basics"],
         "difficulty": 2
+      },
+      {
+        "slug": "two_product_production_decision",
+        "name": "Two Product Production Decision",
+        "uuid": "TODO: Add uuid",
+        "practices": [
+          "conditionals",
+          "comparisons",
+          "numbers"
+        ],
+        "prerequisites": ["basics"],
+        "difficulty": 5
+      },
+      {
+        "slug": "rtos-static-scheduling",
+        "name": "Real-Time Operating System Nonpreemptive Static Scheduling",
+        "uuid": "TODO: Add uuid",
+        "practices": [
+          "conditionals",
+          "comparisons",
+          "loops",
+          "numbers"
+        ],
+        "prerequisites": [
+          "basics",
+          "intermediates"
+        ],
+        "difficulty": 9 
       }
     ],
     "foregone": ["lens-person"]
