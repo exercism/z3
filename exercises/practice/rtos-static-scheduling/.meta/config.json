@@ -4,17 +4,17 @@
     "CSwift8"
   ],
   "contributors": [
-    "Newby555"
   ],
   "files": {
     "solution": [
-      "rtos_static_scheduling_example.py"
+      "rtos_static_scheduling.py",
+      "rtos_static_scheduling_classes.py"
     ],
     "test": [
       "rtos_static_scheduling_test.py"
     ],
     "example": [
-      "rtos_static_scheduling.py"
+      "rtos_static_scheduling_example.py"
     ]
   },
   "source": "This is an exercise to introduce users to loops and equations in Z3",

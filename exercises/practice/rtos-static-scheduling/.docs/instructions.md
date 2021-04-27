@@ -34,7 +34,7 @@ an instance of `PeriodicRealTimeTask` or `DynamicRealTimeTask` with all task par
 The `isinstance()` built-in Python function can be used to differentiate between the two tasks 
 in the list.  The order of the list is irrelevant; look only at the parameters of the tasks.  
 The second input is a single integer that specifies the context switching overhead.  The context
-switching overhead will always be nonzero.
+switching overhead will always be a nonnegative integer.
 
 The output should be a dictionary where the keys are the task ID from RealTimeTask
 instances, and the value should be a list of two-tuples.  The format of the two-tuples
@@ -43,7 +43,7 @@ while periodic tasks may contain more than one.  The order of the two-tuples in 
 does not matter.  If a valid schedule cannot be created from list of the tasks with the 
 given context switching overhead, raise a `NoRtosStaticScheduleProducible` exception.  Note 
 that the Z3 model results for variables will need to be converted to ints before being output.  If 
-the Z3 model result is of type IntNumRef, the `as_long()` class method may be used to convert 
+the Z3 model result is of type `IntNumRef`, the `as_long()` class method may be used to convert 
 to an integer.
 
 An additional function is provided to allow the user to visualize the sequential order
