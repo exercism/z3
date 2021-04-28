@@ -25,7 +25,7 @@
       {
         "slug": "averager",
         "name": "Averager",
-        "uuid": "TODO: Add uuid",
+        "uuid": "1cda7ba7-553b-47f4-921c-de74b20d99d1",
         "practices": [
         "numbers"
         ],
@@ -35,7 +35,7 @@
        {
         "slug": "bowling",
         "name": "Bowling",
-        "uuid": "TODO: Add uuid",
+        "uuid": "86c0cfbd-9b93-43d3-b200-8c7a50417eef",
         "practices": [
           "conditionals",
           "comparisons",
@@ -48,7 +48,7 @@
       {
         "slug": "equilateral-triangle",
         "name": "Equilateral Triangle",
-        "uuid": "TODO: Add uuid",
+        "uuid": "546cf680-3016-49fd-8afe-7644a0bbe74a",
         "practices": [
           "conditionals",
           "comparisons",
@@ -61,7 +61,7 @@
       {
         "slug": "eight-queens",
         "name": "Eight Queens",
-        "uuid": "TODO: Add uuid",
+        "uuid": "68648201-ca67-43a0-95ee-fc401c97ce56",
         "practices": [
           "conditionals",
           "comparisons",
@@ -74,7 +74,7 @@
       {
         "slug": "quadratic-roots",
         "name": "Quadratic Roots",
-        "uuid": "TODO: Add uuid",
+        "uuid": "c2f72622-e85e-4f0b-970a-9605c7687b38",
         "practices": [
           "conditionals",
           "comparisons",
@@ -86,7 +86,7 @@
       {
         "slug": "missing-number",
         "name": "Missing Number",
-        "uuid": "TODO: Add uuid",
+        "uuid": "cf47198b-dcef-411b-be80-101c191320d4",
         "practices": [
           "conditionals",
           "comparisons",
@@ -98,7 +98,7 @@
       {
         "slug": "minima",
         "name": "Local Minima",
-        "uuid": "TODO: Add uuid",
+        "uuid": "104b2222-f8c4-46bf-9268-6fed5edc4635",
         "practices": [
           "conditionals",
           "comparisons",
@@ -110,7 +110,7 @@
       {
         "slug": "goldbach",
         "name": "Goldbach's Conjecture",
-        "uuid": "TODO: Add uuid",
+        "uuid": "685bb53f-3f3e-435c-868b-17fd6b376826",
         "practices": [
           "conditionals",
           "comparisons",
@@ -122,7 +122,7 @@
       {
         "slug": "prime-number",
         "name": "Prime Number",
-        "uuid": "TODO: Add uuid",
+        "uuid": "9ab1e518-43a3-4b04-a5a3-4c86c07dc67c",
         "practices": [
           "conditionals",
           "comparisons",
@@ -134,7 +134,7 @@
       {
         "slug": "two-product-production-decision",
         "name": "Two Product Production Decision",
-        "uuid": "TODO: Add uuid",
+        "uuid": "1a9ec881-79f6-492c-b6bb-18dffd3a88e4",
         "practices": [
           "conditionals",
           "comparisons",
@@ -146,7 +146,7 @@
       {
         "slug": "rtos-static-scheduling",
         "name": "Real-Time Operating System Nonpreemptive Static Scheduling",
-        "uuid": "TODO: Add uuid",
+        "uuid": "7c5274c9-28ba-4d8f-b7ab-fb1ca045559e",
         "practices": [
           "conditionals",
           "comparisons",
@@ -164,43 +164,43 @@
   },
   "concepts": [
     {
-      "uuid": "TODO: Add uuid",
+      "uuid": "a44751c5-9468-4397-81b8-54a1a4aa9b8c",
       "slug": "basics",
       "name": "Basics",
       "blurb": "TODO: add blurb for basics concept"
     },
     {
-      "uuid": "TODO: Add uuid",
+      "uuid": "fa24f8c2-2b4f-4e5b-b6c9-87d9a3e1a3a4",
       "slug": "bools",
       "name": "Bools",
       "blurb": "TODO: add blurb for bools concept"
     },
     {
-      "uuid": "TODO: Add uuid",
+      "uuid": "6bdf7274-086d-4831-9368-915c963c45f5",
       "slug": "for-loops",
       "name": "For Loops",
       "blurb": "TODO: add blurb for for-loops concept"
     },
     {
-      "uuid": "TODO: Add uuid",
+      "uuid": "1b6ded27-7f79-4a5a-b1ef-9ad3bdf17455",
       "slug": "functions",
       "name": "Functions",
       "blurb": "TODO: add blurb for functions concept"
     },
     {
-      "uuid": "TODO: Add uuid",
+      "uuid": "e44633cb-062d-49f6-b34b-56b8eb9f0d8d",
       "slug": "integers",
       "name": "Integers",
       "blurb": "TODO: add blurb for integers concept"
     },
     {
-      "uuid": "TODO: Add uuid",
+      "uuid": "62888f93-0e85-4926-9e8a-dbedef8055e3",
       "slug": "return-keyword",
       "name": "Return Keyword",
       "blurb": "TODO: add blurb for return-keyword concept"
     },
     {
-      "uuid": "TODO: Add uuid",
+      "uuid": "60a6f6a3-1af8-43c2-9361-043ea5cef1cb",
       "slug": "tuples",
       "name": "Tuples",
       "blurb": "TODO: add blurb for tuples concept"
