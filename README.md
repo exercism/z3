@@ -10,7 +10,8 @@ Pre-built binaries for stable and nightly releases are available from [here.](ht
 
 Z3 should be built using Visual Studio with Python bindings for these exercises.
 
-
+## License
+This repository uses the [MIT License](/LICENSE).
 
 ## Installing Z3
 
@@ -72,6 +73,16 @@ cd build
 pip install z3-solver
 ```
 
-
+To test, you can run:
+```python
+from x3 import *
+x = Real('x')
+y = Real('y)
+s = Solver()
+s.add(x + y > 5, x > 1, y > 1)
+print(s.check())
+print(s.model())
+```
+The last two lines should produce `sat` and `[y = 4, x = 2]`.
 
 You should now be able to open Visual Studio and run Z3 with its Python binding.
