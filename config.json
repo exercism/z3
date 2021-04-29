@@ -12,12 +12,20 @@
   "version": 3,
   "online_editor": {
     "indent_style": "space",
-    "indent_size": 4
+    "indent_size": 4,
+    "ace_editor_language": "z3",
+    "highlightjs_language": "z3"
   },
   "files": {
-    "solution": ["%{snake_slug}.py"],
-    "test": ["%{snake_slug}_test.py"],
-    "example": ["example.py"],
+    "solution": [
+      "%{snake_slug}.py"
+    ],
+    "test": [
+      "%{snake_slug}_test.py"
+    ],
+    "example": [
+      "example.py"
+    ]
   },
   "exercises": {
     "concept": [],
@@ -27,12 +35,12 @@
         "name": "Averager",
         "uuid": "1cda7ba7-553b-47f4-921c-de74b20d99d1",
         "practices": [
-        "numbers"
+          "numbers"
         ],
         "prerequisites": [],
         "difficulty": 1
       },
-       {
+      {
         "slug": "bowling",
         "name": "Bowling",
         "uuid": "86c0cfbd-9b93-43d3-b200-8c7a50417eef",
@@ -42,7 +50,9 @@
           "loops",
           "numbers"
         ],
-        "prerequisites": ["basics"],
+        "prerequisites": [
+          "basics"
+        ],
         "difficulty": 5
       },
       {
@@ -55,7 +65,9 @@
           "loops",
           "numbers"
         ],
-        "prerequisites": ["basics"],
+        "prerequisites": [
+          "basics"
+        ],
         "difficulty": 2
       },
       {
@@ -68,7 +80,9 @@
           "loops",
           "numbers"
         ],
-        "prerequisites": ["basics"],
+        "prerequisites": [
+          "basics"
+        ],
         "difficulty": 5
       },
       {
@@ -80,7 +94,9 @@
           "comparisons",
           "numbers"
         ],
-        "prerequisites": ["basics"],
+        "prerequisites": [
+          "basics"
+        ],
         "difficulty": 5
       },
       {
@@ -92,7 +108,9 @@
           "comparisons",
           "numbers"
         ],
-        "prerequisites": ["basics"],
+        "prerequisites": [
+          "basics"
+        ],
         "difficulty": 1
       },
       {
@@ -104,7 +122,9 @@
           "comparisons",
           "numbers"
         ],
-        "prerequisites": ["basics"],
+        "prerequisites": [
+          "basics"
+        ],
         "difficulty": 2
       },
       {
@@ -116,7 +136,9 @@
           "comparisons",
           "numbers"
         ],
-        "prerequisites": ["basics"],
+        "prerequisites": [
+          "basics"
+        ],
         "difficulty": 5
       },
       {
@@ -128,7 +150,9 @@
           "comparisons",
           "numbers"
         ],
-        "prerequisites": ["basics"],
+        "prerequisites": [
+          "basics"
+        ],
         "difficulty": 2
       },
       {
@@ -140,7 +164,9 @@
           "comparisons",
           "numbers"
         ],
-        "prerequisites": ["basics"],
+        "prerequisites": [
+          "basics"
+        ],
         "difficulty": 5
       },
       {
@@ -157,10 +183,12 @@
           "basics",
           "intermediates"
         ],
-        "difficulty": 9 
+        "difficulty": 9
       }
     ],
-    "foregone": ["lens-person"]
+    "foregone": [
+      "lens-person"
+    ]
   },
   "concepts": [
     {
