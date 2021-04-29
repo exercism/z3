@@ -14,10 +14,10 @@ def createPoly(a: float, b: float, c: float, d: float) -> "Callable":
     return lambda x: a * x ** 3 + b * x ** 2 + c * x + d
 
 class MinimaTest(unittest.TestCase):
-    def checkIsMin(self, f: "Callable", x: float) -> None:
+    def checkIsMin(self, f: "Callable", coefs: tuple, x: float) -> None:
         """Checks with unit test asserts that the given x value is a minimum."""
-        self.assertLess(f(x), f(x - 0.001))
-        self.assertLess(f(x), f(x + 0.001))
+        self.assertLess(f(x), f(x - 0.001), f"Error: value at {x} is not a minimum for polynomial with coefficients {coefs}.")
+        self.assertLess(f(x), f(x + 0.001), f"Error: value at {x} is not a minimum for polynomial with coefficients {coefs}.")
 
     def test_min1(self):
         """Regular cubic function. One local minimum"""
@@ -33,7 +33,7 @@ class MinimaTest(unittest.TestCase):
         for coef_tup in coeffs:
             f = createPoly(*coef_tup)
             minX = toFloat(minima(*coef_tup))
-            self.checkIsMin(f, minX)
+            self.checkIsMin(f, coef_tup, minX)
 
 if(__name__ == "__main__"):
     unittest.main()
