@@ -73,6 +73,8 @@ cd build
 pip install z3-solver
 ```
 
+You should now be able to open Visual Studio and run Z3 with its Python binding.
+
 To test, you can run:
 ```python
 from x3 import *
@@ -84,5 +86,3 @@ print(s.check())
 print(s.model())
 ```
 The last two lines should produce `sat` and `[y = 4, x = 2]`.
-
-You should now be able to open Visual Studio and run Z3 with its Python binding.
