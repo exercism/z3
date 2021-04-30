@@ -162,7 +162,7 @@
       {
         "slug": "dominoes",
         "name": "Dominoes",
-        "uuid": TODO: add UUID after merge,
+        "uuid": "TODO: add UUID after merge",
         "practices": [
           "conditionals",
           "comparisons",
