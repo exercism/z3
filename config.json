@@ -157,7 +157,19 @@
           "basics",
           "intermediates"
         ],
-        "difficulty": 9 
+        "difficulty": 9
+      },
+      {
+        "slug": "dominoes",
+        "name": "Dominoes",
+        "uuid": TODO: add UUID after merge,
+        "practices": [
+          "conditionals",
+          "comparisons",
+          "numbers"
+        ],
+        "prerequisites": ["basics"],
+        "difficulty": 2
       }
     ],
     "foregone": ["lens-person"]
