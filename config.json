@@ -157,7 +157,19 @@
           "basics",
           "intermediates"
         ],
-        "difficulty": 9 
+        "difficulty": 9
+      },
+      {
+        "slug": "dominoes",
+        "name": "Dominoes",
+        "uuid": "221f2a8a-fc01-43eb-8a71-50a605014e86",
+        "practices": [
+          "conditionals",
+          "comparisons",
+          "numbers"
+        ],
+        "prerequisites": ["basics"],
+        "difficulty": 2
       }
     ],
     "foregone": ["lens-person"]

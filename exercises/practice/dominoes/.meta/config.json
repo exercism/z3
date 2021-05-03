@@ -1,0 +1,20 @@
+{
+    "blurb": "Given three domino pieces, determine if you can make a chain.",
+    "authors": [
+      "andjam19"
+    ],
+    "contributors": [],
+    "files": {
+      "solution": [
+        "dominoes.py"
+      ],
+      "test": [
+        "dominoes_test.py"
+      ],
+      "example": [
+        "dominoes_example.py"
+      ]
+    },
+    "source": "This is an exercise to introduce users to interacting with numbers in Z3",
+    "source_url": "https://github.com/exercism/problem-specifications/tree/main/exercises/dominoes"
+  }
