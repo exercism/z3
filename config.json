@@ -12,12 +12,20 @@
   "version": 3,
   "online_editor": {
     "indent_style": "space",
-    "indent_size": 4
+    "indent_size": 4,
+    "ace_editor_language": "z3",
+    "highlightjs_language": "z3"
   },
   "files": {
-    "solution": ["%{snake_slug}.py"],
-    "test": ["%{snake_slug}_test.py"],
-    "example": ["example.py"],
+    "solution": [
+      "%{snake_slug}.py"
+    ],
+    "test": [
+      "%{snake_slug}_test.py"
+    ],
+    "example": [
+      "example.py"
+    ],
   },
   "exercises": {
     "concept": [],
@@ -27,12 +35,12 @@
         "name": "Averager",
         "uuid": "1cda7ba7-553b-47f4-921c-de74b20d99d1",
         "practices": [
-        "numbers"
+          "numbers"
         ],
         "prerequisites": [],
         "difficulty": 1
       },
-       {
+      {
         "slug": "bowling",
         "name": "Bowling",
         "uuid": "86c0cfbd-9b93-43d3-b200-8c7a50417eef",
@@ -42,7 +50,9 @@
           "loops",
           "numbers"
         ],
-        "prerequisites": ["basics"],
+        "prerequisites": [
+          "basics"
+        ],
         "difficulty": 5
       },
       {
@@ -55,7 +65,9 @@
           "loops",
           "numbers"
         ],
-        "prerequisites": ["basics"],
+        "prerequisites": [
+          "basics"
+        ],
         "difficulty": 2
       },
       {
@@ -68,7 +80,9 @@
           "loops",
           "numbers"
         ],
-        "prerequisites": ["basics"],
+        "prerequisites": [
+          "basics"
+        ],
         "difficulty": 5
       },
       {
@@ -80,7 +94,9 @@
           "comparisons",
           "numbers"
         ],
-        "prerequisites": ["basics"],
+        "prerequisites": [
+          "basics"
+        ],
         "difficulty": 5
       },
       {
@@ -92,7 +108,9 @@
           "comparisons",
           "numbers"
         ],
-        "prerequisites": ["basics"],
+        "prerequisites": [
+          "basics"
+        ],
         "difficulty": 1
       },
       {
@@ -104,7 +122,9 @@
           "comparisons",
           "numbers"
         ],
-        "prerequisites": ["basics"],
+        "prerequisites": [
+          "basics"
+        ],
         "difficulty": 2
       },
       {
@@ -116,7 +136,9 @@
           "comparisons",
           "numbers"
         ],
-        "prerequisites": ["basics"],
+        "prerequisites": [
+          "basics"
+        ],
         "difficulty": 5
       },
       {
@@ -128,7 +150,9 @@
           "comparisons",
           "numbers"
         ],
-        "prerequisites": ["basics"],
+        "prerequisites": [
+          "basics"
+        ],
         "difficulty": 2
       },
       {
@@ -140,7 +164,9 @@
           "comparisons",
           "numbers"
         ],
-        "prerequisites": ["basics"],
+        "prerequisites": [
+          "basics"
+        ],
         "difficulty": 5
       },
       {
@@ -168,54 +194,58 @@
           "comparisons",
           "numbers"
         ],
-        "prerequisites": ["basics"],
+        "prerequisites": [
+          "basics"
+        ],
         "difficulty": 2
       }
     ],
-    "foregone": ["lens-person"]
+    "foregone": [
+      "lens-person"
+    ]
   },
   "concepts": [
     {
       "uuid": "a44751c5-9468-4397-81b8-54a1a4aa9b8c",
       "slug": "basics",
       "name": "Basics",
-      "blurb": "TODO: add blurb for basics concept"
+      "blurb": "Basics concepts of Z3."
     },
     {
       "uuid": "fa24f8c2-2b4f-4e5b-b6c9-87d9a3e1a3a4",
       "slug": "bools",
       "name": "Bools",
-      "blurb": "TODO: add blurb for bools concept"
+      "blurb": "Boolean logic."
     },
     {
       "uuid": "6bdf7274-086d-4831-9368-915c963c45f5",
       "slug": "for-loops",
       "name": "For Loops",
-      "blurb": "TODO: add blurb for for-loops concept"
+      "blurb": "For-loops logic."
     },
     {
       "uuid": "1b6ded27-7f79-4a5a-b1ef-9ad3bdf17455",
       "slug": "functions",
       "name": "Functions",
-      "blurb": "TODO: add blurb for functions concept"
+      "blurb": "Functions in Z3."
     },
     {
       "uuid": "e44633cb-062d-49f6-b34b-56b8eb9f0d8d",
       "slug": "integers",
       "name": "Integers",
-      "blurb": "TODO: add blurb for integers concept"
+      "blurb": "Integers in Z3."
     },
     {
       "uuid": "62888f93-0e85-4926-9e8a-dbedef8055e3",
       "slug": "return-keyword",
       "name": "Return Keyword",
-      "blurb": "TODO: add blurb for return-keyword concept"
+      "blurb": "Return-keyword for Z3"
     },
     {
       "uuid": "60a6f6a3-1af8-43c2-9361-043ea5cef1cb",
       "slug": "tuples",
       "name": "Tuples",
-      "blurb": "TODO: add blurb for tuples concept"
+      "blurb": "Tuples in Z3."
     }
   ],
   "key_features": [
