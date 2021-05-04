@@ -15,4 +15,4 @@ def prime_number(x):
     if(s.check() == sat):
         return False
 
-    return(True)
+    return True

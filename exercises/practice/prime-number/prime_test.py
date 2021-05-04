@@ -2,50 +2,30 @@ import unittest
 from prime import prime_number
 
 class PrimeTest(unittest.TestCase):
-    def test_prime_number_one(self):
-        self.assertEqual(prime_number(0), False)
+    def check(self, number: int, isPrime: bool):
+        """Checks if the user's program correctly determines primality and provides a helpful message if not."""
+        self.assertEqual(prime_number(number), isPrime, f"Error: {number} was found {'not ' if isPrime else ''}to be prime.")
 
-    def test_prime_number_two(self):
-        self.assertEqual(prime_number(1), False)
-
-    def test_prime_number_three(self):
-        self.assertEqual(prime_number(2), True)
-
-    def test_prime_number_four(self):
-        self.assertEqual(prime_number(-2), False)
-
-    def test_prime_number_five(self):
-        self.assertEqual(prime_number(2.5), False)
-
-    def test_prime_number_six(self):
-        self.assertEqual(prime_number(4), False)
-
-    def test_prime_number_seven(self):
-        self.assertEqual(prime_number(-4), False)
-
-    def test_prime_number_eight(self):
-        self.assertEqual(prime_number(4.0), False)        
-
-    def test_prime_number_nine(self):
-        self.assertEqual(prime_number(5.0), True)
-
-    def test_prime_number_ten(self):
-        self.assertEqual(prime_number(2520), False)
-
-    def test_prime_number_eleven(self):
-         self.assertEqual(prime_number(524287), True)
-
-    def test_prime_number_twelve(self):
-         self.assertEqual(prime_number(-524287), False)
-
-    def test_prime_number_thirteen(self):
-         self.assertEqual(prime_number(524288), False)
-
-    def test_prime_number_fourteen(self):
-        self.assertEqual(prime_number(100000000), False)
-
-    def test_prime_number_fifteen(self):
-        self.assertEqual(prime_number(-100000000), False)
+    def test_all(self):
+        cases = [
+            (0, False),
+            (1, False),
+            (2, True),
+            (-2, False),
+            (2.5, False),
+            (4, False),
+            (-4, False),
+            (4.0, False),
+            (5.0, True),
+            (2520, False),
+            (524287, True),
+            (-524287, False),
+            (524288, False),
+            (100000000, False),
+            (-100000000, False)
+        ]
+        for case in cases:
+            self.check(*case)
 
 if __name__ == "__main__":
-    unittest.main() 
+    unittest.main()

@@ -5,9 +5,11 @@ from equilateral_triangle import *
 def check(ut, first_point, second_point, expected_third_point_1, expected_third_point_2):
     third_point_1, third_point_2 = generate_third_points(first_point, second_point)
 
-    ut.assertNotEqual(third_point_1, third_point_2)
-    ut.assertTrue(third_point_1 == expected_third_point_1 or third_point_1 == expected_third_point_2)
-    ut.assertTrue(third_point_2 == expected_third_point_1 or third_point_2 == expected_third_point_2)
+    ut.assertNotEqual(third_point_1, third_point_2, "Error: Both third points are the same.")
+    ut.assertTrue(third_point_1 == expected_third_point_1 or third_point_1 == expected_third_point_2,
+                  f"No neither point matches {expected_third_point_1}. Have {third_point_1} and {third_point_2}.")
+    ut.assertTrue(third_point_2 == expected_third_point_1 or third_point_2 == expected_third_point_2,
+                  f"No neither point matches {expected_third_point_2}. Have {third_point_1} and {third_point_2}.")
 
 class EquilateralTriangleTest(unittest.TestCase):
     NUM_DECIMAL_PLACES = 5
@@ -54,4 +56,4 @@ class EquilateralTriangleTest(unittest.TestCase):
             check(self, first_point, second_point, expected_third_point_1, expected_third_point_2)
 
 if __name__ == "__main__":
-    unittest.main() 
+    unittest.main()
