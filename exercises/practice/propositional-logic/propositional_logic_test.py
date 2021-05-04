@@ -1,7 +1,6 @@
 import unittest
 from z3 import *
-from propositional_logic import *
-
+from .propositional_logic import *
 
 class PropositionalLogicTest(unittest.TestCase):
     def test_A_B(self):
@@ -48,7 +47,6 @@ class PropositionalLogicTest(unittest.TestCase):
         self.assertEqual(t1, expected_t1)
         self.assertEqual(t2, expected_t2)
         self.assertEqual(t3, expected_t3)
-
 
 if __name__ == "__main__":
     unittest.main()

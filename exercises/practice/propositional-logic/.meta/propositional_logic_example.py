@@ -1,6 +1,5 @@
 from z3 import *
 
-
 def propositional_logic_proofs(A, B):
     # Recreate the first theorem A & B == (A' | B')' (DeMorgan's Law) using Z3's propositional logic functions.
     theorem_one = And(A, B) == Not(Or(Not(A), Not(B)))
