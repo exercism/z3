@@ -1,0 +1,21 @@
+{
+  "blurb": "A logic exercise. Implement a function that returns three common propositional logic proofs",
+  "authors": [
+    "JimmyQuenichet"
+  ],
+  "contributors": [
+  ],
+  "files": {
+    "solution": [
+      "propositional_logic.py"
+    ],
+    "test": [
+      "propositional_logic_test.py"
+    ],
+    "example": [
+      ".meta/propositional_logic_example.py"
+    ]
+  },
+  "source": "This is an exercise to introduce users to interacting with propositional logic proofs in Z3",
+  "source_url": "https://en.wikipedia.org/wiki/Propositional_calculus"
+}
