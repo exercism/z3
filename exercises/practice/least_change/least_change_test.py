@@ -1,8 +1,6 @@
 import unittest
 from z3 import *
-from least_change import (
-    least_change,
-)
+from .least_change import *
 
 # Tests adapted from https://github.com/exercism/python/blob/main/exercises/practice/change/change_test.py
 
