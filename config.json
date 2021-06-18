@@ -3,10 +3,10 @@
   "slug": "z3",
   "active": true,
   "status": {
-    "concept_exercises": true,
-    "test_runner": true,
-    "representer": true,
-    "analyzer": true
+    "concept_exercises": false,
+    "test_runner": false,
+    "representer": false,
+    "analyzer": false
   },
   "blurb": "Z3 is a theorem prover from Microsoft Research. It is ideal for determining if mathematical equations have a solution and for solving those equations very quickly if there is a possible solution.",
   "version": 3,
