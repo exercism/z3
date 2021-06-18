@@ -11,7 +11,7 @@
       "missing_number.py"
     ],
     "test": [
-      "missing_number_test.py "
+      "missing_number_test.py"
     ],
     "example": [
       "missing_number_example.py"
