@@ -85,6 +85,16 @@
         "difficulty": 5
       },
       {
+        "slug": "hello-world",
+        "name": "Hello World",
+        "uuid": "68648201-ca67-43a0-95ee-fc401c97ce38",
+        "practices": [
+          "strings"
+        ],
+        "prerequisites": [],
+        "difficulty": 1
+      },
+      {
         "slug": "quadratic-roots",
         "name": "Quadratic Roots",
         "uuid": "c2f72622-e85e-4f0b-970a-9605c7687b38",
