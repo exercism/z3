@@ -12,7 +12,7 @@
       "hello_world_test.py"
     ],
     "example": [
-      ""
+      "hello_world_example.py"
     ]
   },
   "source": "This is an exercise to introduce users to interacting with Z3",
