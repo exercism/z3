@@ -87,7 +87,7 @@
       {
         "slug": "hello-world",
         "name": "Hello World",
-        "uuid": "",
+        "uuid": "TODO",
         "practices": [
           "strings"
         ],
