@@ -15,7 +15,7 @@
 # - scripts/ci-check
 # - scripts/ci
 
-name: <track> / main
+name: z3 / main
 
 on:
   push:
@@ -24,41 +24,46 @@ on:
 
 jobs:
   precheck:
-    runs-on: <image-name>
+    runs-on: ubuntu-16.04
 
     steps:
       - uses: actions/checkout@v2
-      - name: Use <setup tooling>
-        uses: <action to setup tooling>
+      - name: Setup Python Dependencies
+        uses: actions/setup-python@v2.2.2
         with:
-          # Here, use the LTS/stable version of the track's tooling, e.g.:
-          # node-version: 12.x
+          python-version: 3.8
 
       - name: Install project dependencies
-        run: <install dependencies>
+        run: 
+          python scripts/mk_make.py -x
+          cd build
+          pip install z3-solver
 
-      - name: Run exercism/<track> ci pre-check (checks config, lint code) for all exercises
+      - name: Run exercism/z3 ci pre-check (checks config, lint code) for all exercises
         run: scripts/ci-check
 
   ci:
-    runs-on: <image-name>
+    runs-on: ubuntu-16.04
 
     strategy:
       matrix:
-        # Here, add all SUPPORTED versions only, e.g.:
-        # version: [10.x, 12.x, 14.x]
-        # Optionally, add more matrix variables, such as os or arch
+        python-version: [3.6, 3.7, 3.8, 3.9]
 
     steps:
       - uses: actions/checkout@v2
-      - name: Use <setup tooling> ${{ matrix.version }}
-        uses: <action to setup tooling>
+      - name: Use ${{ matrix.version }}
+        uses: actions/setup-python@v2.2.2
         with:
-          # Use the ${{ matrix.x }} format to inject variables into commands
-          # node-version: ${{ matrix.version }}
+          python-version: ${{ matrix.python-version }}
 
-      - name: Install project dependencies
-        run: <install dependencies>
+      - name: Install python dependencies
+        run: python scripts/mk_make.py -x
+        
+      - name: Enter build
+        run: cd build
+        
+      - name: Install Z3 dependencies
+        run: pip install z3-solver
 
-      - name: Run exercism/<track> ci (runs tests) for all exercises
+      - name: Run exercism/z3 ci (runs tests) for all exercises
         run: scripts/ci
