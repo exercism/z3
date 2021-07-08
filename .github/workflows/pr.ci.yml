@@ -1,68 +1,62 @@
 # This workflow will do a clean install of the dependencies and run tests across different versions
 #
-# Replace <track> with the track name
-# Replace <image-name> with an image to run the jobs on
-# Replace <action to setup tooling> with a github action to setup tooling on the image
-# Replace <install dependencies> with a cli command to install the dependencies
-# Replace <code-extensions> with file extensions that should trigger the workflow
-#
 # Requires scripts:
 # - scripts/pr-check path/to/changed/file path/to/changed/file
 # - scripts/pr path/to/changed/file path/to/changed/file
 
-name: <track> / pr
+name: z3 / pr
 
 on: pull_request
 
 jobs:
   precheck:
-    runs-on: <image-name>
+    runs-on: ubuntu-16.04
 
     steps:
       - name: Checkout PR
         uses: actions/checkout@v2
 
       - name: Use Node.js LTS (12.x)
-        uses: <action to setup tooling>
+        uses: actions/setup-python@v2.2.2
         with:
-          # Here, use the LTS/stable version of the track's tooling, e.g.:
-          # node-version: 12.x
+          python-version: 3.8
 
       - name: Install project dependencies
-        run: <install dependencies>
+        run: 
+          python scripts/mk_make.py -x
+          cd build
+          pip install z3-solver
 
-        # Replace <code-extensions> with file extensions that should trigger this check. Replace with .* to allow anything.
-      - name: Run exercism/<track> ci pre-check (stub files, config integrity) for changed exercises
+      - name: Run exercism/z3 ci pre-check (stub files, config integrity) for changed exercises
         run: |
           PULL_REQUEST_URL=$(jq -r ".pull_request.url" "$GITHUB_EVENT_PATH")
           curl --url $"${PULL_REQUEST_URL}/files" --header 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' | \
-            jq -c '.[] | select(.status == "added" or .status == "modified") | select(.filename | match("\\.(<code-extensions>|md|json)$")) | .filename' | \
+            jq -c '.[] | select(.status == "added" or .status == "modified") | select(.filename | match("\\.(.py|md|json)$")) | .filename' | \
             xargs -r scripts/pr-check
 
   ci:
-    runs-on: <image-name>
+    runs-on: ubuntu-16.04
 
     strategy:
       matrix:
-        # Here, add all SUPPORTED versions only, e.g.:
-        # version: [10.x, 12.x, 14.x]
-        # Optionally, add more matrix variables, such as os or arch
+        python-version: [3.6, 3.7, 3.8, 3.9]
 
     steps:
       - uses: actions/checkout@v2
       - name: Use <setup tooling> ${{ matrix.version }}
-        uses: <action to setup tooling>
+        uses: actions/setup-python@v2.2.2
         with:
-          # Use the ${{ matrix.x }} format to inject variables into commands
-          # node-version: ${{ matrix.version }}
+          python-version: ${{ matrix.python-version }}
 
       - name: Install project dependencies
-        run: <install dependencies>
+        run: 
+          python scripts/mk_make.py -x
+          cd build
+          pip install z3-solver
 
-        # Replace <code-extensions> with file extensions that should trigger running tests. Replace with .* to allow anything.
-      - name: Run exercism/<track> ci (runs tests) for changed/added exercises
+      - name: Run exercism/z3 ci (runs tests) for changed/added exercises
         run: |
           PULL_REQUEST_URL=$(jq -r ".pull_request.url" "$GITHUB_EVENT_PATH")
           curl --url $"${PULL_REQUEST_URL}/files" --header 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' | \
-            jq -c '.[] | select(.status == "added" or .status == "modified") | select(.filename | match("\\.(<code-extensions>|md|json)$")) | .filename' | \
+            jq -c '.[] | select(.status == "added" or .status == "modified") | select(.filename | match("\\.(.py|md|json)$")) | .filename' | \
             xargs -r scripts/pr
