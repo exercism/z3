@@ -1,6 +1,6 @@
 # Instructions
 
-This problem is modeled after real-time operating system nonpreemptive static 
+This problem is modeled after real-time operating system non-preemptive static 
 scheduling, but is also similar to the Job-Shop Scheduling Problem (JSP) with 
 only one resource.  This problem assumes that all tasks are known statically.  In 
 other words, the release times of all tasks in this problem are known at the beginning 
@@ -34,7 +34,7 @@ an instance of `PeriodicRealTimeTask` or `DynamicRealTimeTask` with all task par
 The `isinstance()` built-in Python function can be used to differentiate between the two tasks 
 in the list.  The order of the list is irrelevant; look only at the parameters of the tasks.  
 The second input is a single integer that specifies the context switching overhead.  The context
-switching overhead will always be a nonnegative integer.
+switching overhead will always be a non-negative integer.
 
 The output should be a dictionary where the keys are the task ID from RealTimeTask
 instances, and the value should be a list of two-tuples.  The format of the two-tuples
