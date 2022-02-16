@@ -1,7 +1,7 @@
 {
   "language": "Z3",
   "slug": "z3",
-  "active": true,
+  "active": false,
   "status": {
     "concept_exercises": false,
     "test_runner": false,
