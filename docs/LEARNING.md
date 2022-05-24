@@ -14,5 +14,4 @@ If you are brand new to the Z3 language, you should spend time learning
 the basics of the language first. Here are a few resources that can
 help you get started:
 
-* [rise4fun](https://rise4fun.com/z3/tutorial)
-* [Programming Z3](http://theory.stanford.edu/~nikolaj/programmingz3.html)
+- [Programming Z3](http://theory.stanford.edu/~nikolaj/programmingz3.html)
