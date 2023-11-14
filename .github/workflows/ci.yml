@@ -21,9 +21,9 @@ jobs:
     runs-on: ubuntu-16.04
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@ee0669bd1cc54295c223e0bb666b733df41de1c5
       - name: Setup Python Dependencies
-        uses: actions/setup-python@v2.2.2
+        uses: actions/setup-python@dc73133d4da04e56a135ae2246682783cc7c7cb6
         with:
           python-version: 3.8
 
@@ -44,9 +44,9 @@ jobs:
         python-version: [3.6, 3.7, 3.8, 3.9]
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@ee0669bd1cc54295c223e0bb666b733df41de1c5
       - name: Use ${{ matrix.version }}
-        uses: actions/setup-python@v2.2.2
+        uses: actions/setup-python@dc73133d4da04e56a135ae2246682783cc7c7cb6
         with:
           python-version: ${{ matrix.python-version }}
 
