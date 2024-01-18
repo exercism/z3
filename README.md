@@ -77,9 +77,9 @@ You should now be able to open Visual Studio and run Z3 with its Python binding.
 
 To test, you can run:
 ```python
-from x3 import *
+from z3 import *
 x = Real('x')
-y = Real('y)
+y = Real('y')
 s = Solver()
 s.add(x + y > 5, x > 1, y > 1)
 print(s.check())
